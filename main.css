@@ -1,0 +1,26 @@
+/*ul{
+	text-decoration: line-through;
+}*/
+body{
+	background: url('img/gray_jean.png') no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+ul{
+	list-style: none;
+
+}
+#newItem{
+	width:25%;
+	margin-bottom: 4em;
+}
+input[type="checkbox"]{
+	margin-left: -70px;
+
+}
+
+input[type="checkbox"]:checked+label {
+	text-decoration: line-through;
+	font-weight: bold;
+	color: red;
+}

@@ -1,27 +1,35 @@
 <!DOCTYPE>
 <html>
 <head>
-	<title>Shopping List App</title>
-	<link rel="stylesheet" href="main.css" type="text/css" charset="utf-8" >
+	<title>Shop Smart</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie|Gloria+Hallelujah|Tangerine|Coming+Soon|Special+Elite|Chewy|Rock+Salt' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css" type="text/css" charset="utf-8" >
 </head>
 <body>
-<div>
+	<header><h1>Shop <span>Smart</span> </h1>
+	</header>
+	<div><p>Helps you organise your shopping</p>
+	</div>
+	<div>
 	<input type="text" id="newItem" name="new_item">
-	<button type="submit">Add</button>
+	<button type="submit">Add to List</button>
 	<label id="feedback"></label>
-	
-	<ul id="lists">
-		<li><input type="checkbox" id="firstitem" value="Beverages" name="first_item">
-			<label for="firstitem">Beverages</label>
-		</li>
-		<li><input type="checkbox" id="seconditem" value="Beverages" name="second_item">
-			<label for="seconditem">Toiletries</label>
-		</li>
-	</ul>
-
-</div>
-
-
+	</div>
+	<div id="Uncompleted">
+		<h2>Intended</h2>
+		<hr>
+		<ol id="lists">
+		
+		</ol>
+	</div>
+	<div id="completed">
+		<h2>Purchased</h2>
+		<hr>
+		<ol id="purchased"></ol>
+	</div>	
+	<footer>&copy Tolulope Komolafe</footer>
 
 
 
@@ -29,7 +37,7 @@
 
 
 </body>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="script.js" charset="utf-8"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/script.js" charset="utf-8"></script>
 
 </html>

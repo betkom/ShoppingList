@@ -1,0 +1,85 @@
+body{
+	background: url('../img/image5.jpg') no-repeat;
+	background-size: cover;
+	text-align: center;
+	font-family: 'Rock Salt' sans-serif;
+	font-size: 1.5em;
+}
+h1{
+	font-family: 'Special Elite' sans-serif;
+	letter-spacing: 0.8em;
+	color: pink;
+	background: rgba(39,40,34,0.9);
+	padding-top: 5px;
+}
+span{
+	color: #1156BD;
+}
+p{
+	font-family: 'Tangerine' sans-serif;
+	font-size: 2em;
+	color: #C45004;
+}
+ul{
+	list-style: none;
+	margin: auto;
+
+}
+#newItem{
+	width:30%;
+	height:2.5em;
+	margin-bottom: 4em;
+	font-family: 'Coming Soon' sans-serif;
+	font-weight: bold;
+	text-align: center;
+	background: pink;
+	border-style: solid;
+	border-width: 1px;
+	}
+#newItem:hover{
+	border-color: darkred;
+}	
+button {
+	border: thick black;
+	padding: 5px 15px 5px 15px;
+	color: #B41E0F;
+	background: rgba(39,40,34,0.9);
+}
+button:hover{
+	color: blue;
+}
+input[type="checkbox"]{
+	margin-left: -70px;
+
+}
+#delete{
+	margin-left: 2em;
+}
+
+input[type="checkbox"]:checked+label {
+	text-decoration: line-through;
+	font-weight: bold;
+	color: #641406;
+}
+#uncompleted, #completed{
+	border-radius: 15%;
+	margin: 0 auto;
+	width: 50%;
+	background: rgba(177,5,5,0.9);
+	color: blue;
+	font-size: 0.5em;
+}
+ol{
+	text-align: center;
+}
+li{
+	font-size: large;
+}
+
+footer{
+	color: #641406;
+	position: relative;
+	bottom: 0;
+	margin-top: 50px;
+	font-size: small;
+}

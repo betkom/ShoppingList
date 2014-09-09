@@ -1,6 +1,20 @@
 var newItem;
 var Shop ={
 
+	init:function(){
+	$('button').click(function(){
+		Shop.getItem();
+	});
+		Shop.checkList();
+		Shop.unCheckList();
+		Shop.delList();
+	},
+
+	getItem: function(){
+		newItem = $('#newItem').val();
+		Shop.isInputValid();
+	},
+	
 	/*********************
 		INPUT VALIDATION
 	**********************/
@@ -20,34 +34,33 @@ var Shop ={
 		}
 	},
 	
-	/*********************
-		ADD ITEMS
-	*********************/
+	// ADD ITEMS
 	createList: function(){
-	 	$('#lists').append('<li>'+ '<input type="checkbox" class="checkbox" name="lists">'+ newItem + '<button id="delete">'+ 'Delete'+ '</button>'+ '</li>');
-		}
-};
-
-
-$('button').click(function(event){
-	event.preventDefault();
-	newItem = $('#newItem').val();
-	 Shop.isInputValid();
-	 $('#newItem').val("");
-});
-// DELETE LIST ITEMS
-$(document).on("click", "#delete", function(){
-   $(this).parent('li').remove();
-});
-
-// CHECK LIST ITEMS ON INTENDED LIST
-$('#lists').on('change',"input[type =checkbox]",function(){
+	 	$('#lists').append('<li>'+ '<input type="checkbox" class="checkbox" name="lists">'+ newItem + '<button id="delete">'+ 'Delete'+ '</button>'+ '</li>');	 	
+	},
+	//CHECK AND UNCHECK LIST ITEMS
+	checkList: function(){
+		$('#lists').on('change',"input[type =checkbox]",function(){
 		var check_off = $(this).parent();
 		$('#purchased').append(check_off);
 	});
+	},
 
-// CHECK LIST ITEMS ON COMPLETED LIST
-$('#purchased').on('change',"input[type =checkbox]",function(){
-		var check_off = $(this).parent();
-		$('#lists').append(check_off);
+	unCheckList: function(){
+		$('#purchased').on('change',"input[type =checkbox]",function(){
+ 		var check_off = $(this).parent();
+ 		$('#lists').append(check_off);
+ 	});
+	},
+	//DELETE LIST ITEMS
+	delList: function(){
+		$(document).on("click", "#delete", function(){
+   		$(this).parent('li').remove();
 	});
+	}
+};
+
+ Shop.init();
+
+
+

@@ -56,11 +56,6 @@ input[type="checkbox"]{
 	margin-left: 2em;
 }
 
-input[type="checkbox"]:checked+label {
-	text-decoration: line-through;
-	font-weight: bold;
-	color: #641406;
-}
 #uncompleted, #completed{
 	border-radius: 15%;
 	margin: 0 auto;
@@ -68,12 +63,15 @@ input[type="checkbox"]:checked+label {
 	background: rgba(177,5,5,0.9);
 	color: blue;
 	font-size: 0.5em;
+	padding-bottom: 10px;
 }
-ol{
+ul{
 	text-align: center;
 }
 li{
 	font-size: large;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 
 footer{

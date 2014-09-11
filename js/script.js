@@ -4,10 +4,12 @@ var Shop ={
 	init:function(){
 	$('button').click(function(){
 		Shop.getItem();
+		$('#newItem').val("");
 	});
 		Shop.checkList();
 		Shop.unCheckList();
 		Shop.delList();
+		Shop.editList();
 	},
 
 	getItem: function(){
@@ -25,7 +27,7 @@ var Shop ={
 		else if(newItem.length < 3){
 			alert('Item description too short');
 		}
-		else if(newItem.length > 30){
+		else if(newItem.length > 18){
 			alert('Item description too long');
 
 		}
@@ -36,7 +38,7 @@ var Shop ={
 	
 	// ADD ITEMS
 	createList: function(){
-	 	$('#lists').append('<li>'+ '<input type="checkbox" class="checkbox" name="lists">'+ newItem + '<button id="delete">'+ 'Delete'+ '</button>'+ '</li>');	 	
+	 	$('#lists').append('<li>'+ '<input type="checkbox" class="checkbox" name="lists">'+"<span>"+ newItem +"</span>"+'<button id="delete">'+ 'Del'+ '</button>'+ '<button id="edit">'+ 'Edit'+ '</button>'+'</li>');	 	
 	},
 	//CHECK AND UNCHECK LIST ITEMS
 	checkList: function(){
@@ -57,6 +59,15 @@ var Shop ={
 		$(document).on("click", "#delete", function(){
    		$(this).parent('li').remove();
 	});
+	},
+
+	editList: function(){
+		$(document).on("click","#edit", function(){
+			var edtText = $(this).parent().find($('span')).text();
+			$('#newItem').val(edtText);
+			$(this).parent('li').remove();
+		});
+
 	}
 };
 

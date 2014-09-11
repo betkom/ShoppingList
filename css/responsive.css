@@ -7,21 +7,33 @@
 		font-size: 1.1em;
 	}
 	#newItem{
-		width:90%;
+		width:95%;
 		margin-bottom: 1em;
 	}
 	#addItem{
 		margin-bottom: 3em;
 	}
 	#uncompleted, #completed{
-		width: 90%;
+		width: 100%;
 		padding-bottom: 5px;
 	}
+	#delete{
+		padding: 4px 8px 4px 8px;
+		margin-left: 0.5em;
+	}
+	#edit{
+		margin-left: 5px;
+		padding: 4px 6px 4px 6px;
+	}
 	.checkbox{
-		margin-left: 10px;
+		margin-left: 3px;
 	}
 	li{
 		margin-top: 7px;
+	}
+	ul{
+		margin-left: -20px;
+		font-weight: normal;
 	}
 
 }
@@ -37,12 +49,24 @@
 		margin-bottom: 3em;
 	}
 	#uncompleted, #completed{
-		width: 70%;
+		width: 95%;
 		padding-bottom: 5px;
+	}
+	#delete{
+		padding: 4px 8px 4px 8px;
+		margin-left: 1em;
+	}
+	#edit{
+		margin-left: 5px;
+		padding: 4px 6px 4px 6px;
 	}
 
 	li{
 		margin-top: 7px;
+	}
+	ul{
+		margin-left: -15px;
+		font-weight: normal;
 	}
 }
 
@@ -59,13 +83,17 @@
 	}
 	
 	#uncompleted, #completed{
-		width: 60%;
+		width: 95%;
 		margin-bottom: 20px;
 		padding-bottom: 10px;
 	}
 	li{
 		margin-top: 10px;
 		margin-bottom: 5px;
+	}
+	ul{
+		margin-left: -15px;
+		font-weight: normal;
 	}
 }
 @media screen and (min-width: 671px) and (max-width: 830px){
@@ -75,7 +103,7 @@
 	}
 	
 	#uncompleted, #completed{
-		width: 60%;
+		width: 70%;
 		margin-bottom: 20px;
 		padding-bottom: 10px;
 	}

@@ -1,10 +1,16 @@
 @media  screen and (max-width: 320px){
-
 	h1{
 		letter-spacing: 0.2em;		
 	}
 	p{
 		font-size: 1.1em;
+	}
+	ul{
+		margin-left: -20px;
+		font-weight: normal;
+	}
+	li{
+		margin-top: 7px;
 	}
 	#newItem{
 		width:95%;
@@ -25,21 +31,17 @@
 		margin-left: 5px;
 		padding: 4px 6px 4px 6px;
 	}
-	.checkbox{
-		margin-left: 3px;
-	}
-	li{
-		margin-top: 7px;
-	}
-	ul{
-		margin-left: -20px;
-		font-weight: normal;
-	}
-
 }
 @media screen and (min-width: 321px) and (max-width: 362px){
 	p{
 		font-size: 1.2em;
+	}
+	ul{
+		margin-left: -15px;
+		font-weight: normal;
+	}
+	li{
+		margin-top: 7px;
 	}
 	#newItem{
 		width: 70%;
@@ -59,15 +61,7 @@
 	#edit{
 		margin-left: 5px;
 		padding: 4px 6px 4px 6px;
-	}
-
-	li{
-		margin-top: 7px;
-	}
-	ul{
-		margin-left: -15px;
-		font-weight: normal;
-	}
+	}	
 }
 
 @media screen and (min-width: 363px) and (max-width: 670px){
@@ -77,27 +71,31 @@
 	p{
 		font-size: 1.3em;
 	}
-	#newItem{
-		width: 60%;
-		margin-bottom: 4em;
-	}
-	
-	#uncompleted, #completed{
-		width: 95%;
-		margin-bottom: 20px;
-		padding-bottom: 10px;
+	ul{
+		margin-left: -15px;
+		font-weight: normal;
 	}
 	li{
 		margin-top: 10px;
 		margin-bottom: 5px;
 	}
-	ul{
-		margin-left: -15px;
-		font-weight: normal;
+	#newItem{
+		width: 60%;
+		margin-bottom: 4em;
+	}	
+	#uncompleted, #completed{
+		width: 95%;
+		margin-bottom: 20px;
+		padding-bottom: 10px;
 	}
+		
 }
 @media screen and (min-width: 671px) and (max-width: 830px){
-#newItem{
+	li{
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+	#newItem{
 		width: 60%;
 		margin-bottom: 4em;
 	}
@@ -107,9 +105,4 @@
 		margin-bottom: 20px;
 		padding-bottom: 10px;
 	}
-	li{
-		margin-top: 10px;
-		margin-bottom: 5px;
-	}
-
 }

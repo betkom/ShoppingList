@@ -13,7 +13,7 @@ var Shop ={
 	},
 
 	getItem: function(){
-		newItem = $('#newItem').val();
+		newItem = $.trim($('#newItem').val());
 		Shop.isInputValid();
 	},
 	
@@ -28,8 +28,7 @@ var Shop ={
 			alert('Item description too short');
 		}
 		else if(newItem.length > 18){
-			alert('Item description too long');
-
+			alert('Item must not be more than 18 characters long');
 		}
 		else{
 		Shop.createList();
@@ -47,7 +46,6 @@ var Shop ={
 		$('#purchased').append(check_off);
 	});
 	},
-
 	unCheckList: function(){
 		$('#purchased').on('change',"input[type =checkbox]",function(){
  		var check_off = $(this).parent();
@@ -60,14 +58,12 @@ var Shop ={
    		$(this).parent('li').remove();
 	});
 	},
-
 	editList: function(){
 		$(document).on("click","#edit", function(){
 			var edtText = $(this).parent().find($('span')).text();
 			$('#newItem').val(edtText);
 			$(this).parent('li').remove();
 		});
-
 	}
 };
 

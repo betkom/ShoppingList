@@ -1,4 +1,6 @@
 var newItem;
+// var replaceWith = $('<input name="temp" type="text"/>');
+
 var Shop ={
 
 	init:function(){
@@ -37,7 +39,7 @@ var Shop ={
 	
 	// ADD ITEMS
 	createList: function(){
-	 	$('#lists').append('<li>'+ '<input type="checkbox" class="checkbox" name="lists">'+"<span>"+ newItem +"</span>"+'<button id="delete">'+ 'Del'+ '</button>'+ '<button id="edit">'+ 'Edit'+ '</button>'+'</li>');	 	
+	 	$('#lists').append('<li>'+ '<input type="checkbox" class="checkbox" name="lists">'+"<span>"+ newItem +"</span>"+'<button id="edit">'+ 'Edit'+ '</button>'+'<button id="delete">'+ 'Del'+ '</button>'+ '</li>');	 	
 	},
 	//CHECK AND UNCHECK LIST ITEMS
 	checkList: function(){
@@ -59,11 +61,33 @@ var Shop ={
 	});
 	},
 	editList: function(){
-		$(document).on("click","#edit", function(){
-			var edtText = $(this).parent().find($('span')).text();
-			$('#newItem').val(edtText);
-			$(this).parent('li').remove();
+			$(document).on("click","#edit", function(){
+			var elem = $(this).prev();
+			var replaceWith = $('<input name="temp" type="text"/>');
+			var buttonEdit = $(this);
+			Shop.itemEdit(buttonEdit, elem, replaceWith);
+			$(this).hide();
 		});
+	},
+	itemEdit: function(buttonEdit, elem, replaceWith) {
+		elem.hide();
+		elem.after(replaceWith);
+		replaceWith.val(elem.text());
+		replaceWith.focus();
+		replaceWith.blur(function(){
+			 if($(this).val().length > 18){
+            	alert("Item must not be more than 18 characters long");
+            }else if($(this).val().length < 3){
+            	alert("Item description too short");
+            }
+			else if($(this).val() != "") {
+                elem.text($(this).val());
+            }
+            $(this).remove();
+            elem.show();
+            buttonEdit.show("slow");
+		});
+
 	}
 };
 

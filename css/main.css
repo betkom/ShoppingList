@@ -1,0 +1,92 @@
+/************************
+		MAIN CSS
+************************/
+body{
+	background: url('../img/image5.jpg') no-repeat;
+	background-size: cover;
+	text-align: center;
+	font-family: 'Rock Salt' sans-serif;
+	font-size: 1.5em;
+}
+h1{
+	font-family: 'Special Elite' sans-serif;
+	letter-spacing: 0.8em;
+	color: pink;
+	background: rgba(39,40,34,0.9);
+	padding-top: 5px;
+}
+span{
+	color: #002AFF;
+}
+p{
+	font-family: 'Tangerine' sans-serif;
+	font-size: 2em;
+	color: #C45004;
+}
+ul{
+	list-style: none;
+	margin: auto;
+	font-family: 'Coming Soon' sans-serif;
+	text-align: left;
+	font-weight: bold;
+}
+li{
+	font-size: large;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+button {
+	border: thick black;
+	padding: 5px 15px 5px 15px;
+	color: red;
+	background: rgba(39,40,34,0.9);
+}
+button:hover{
+	color: blue;
+}
+#newItem{
+	width:30%;
+	height:2.5em;
+	margin-bottom: 4em;
+	font-family: 'Coming Soon' sans-serif;
+	font-weight: bold;
+	text-align: center;
+	background: pink;
+	border-style: solid;
+	border-width: 1px;
+	}
+#newItem:hover{
+	border-color: darkred;
+}
+#uncompleted, #completed{
+	border-radius: 15%;
+	margin: 0 auto;
+	width: 50%;
+	max-height: 250spx;
+	overflow:auto;
+	background: rgba(177,5,5,0.9);
+	color: blue;
+	font-size: 0.5em;
+	margin-bottom: 30px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+
+}	
+
+#delete, #edit{
+	float: right;
+}
+#delete{
+	margin-left: 8px;
+}
+
+
+
+
+footer{
+	color: #C45004;
+	position: relative;
+	bottom: 0;
+	margin-top: 50px;
+	font-size: small;
+}
